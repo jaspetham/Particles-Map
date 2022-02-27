@@ -35,6 +35,7 @@ export default class Sketch {
     // this.camera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, -1000, 1000 );
     this.camera.position.set(0, 0, 400);
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+    this.controls.enableRotate = false
     this.time = new THREE.Clock();
     this.elapsedTime = 0;
     this.previousTime = 0;
