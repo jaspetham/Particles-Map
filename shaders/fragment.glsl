@@ -12,20 +12,20 @@ void main(){
     vec2 cUv = 2. * uv - 1.;
 
     vec3 originalColor = vec3(
-        4./255.,
-        (10.)/255., 
-        (20.)/255.
+        11./255.,
+        (102.)/255., 
+        (35.)/255.
     );
 
     vec4 color = vec4(0.08/length(cUv));
 
     color.rgb = min(vec3(10.),color.rgb);
 
-    color.rgb *= originalColor * 1200.;
+    color.rgb *= originalColor * 100.;
 
     color *= vOpacity;
 
-    color.a = min(1.,color.a) * 10.;
+    color.a = min(1.,color.a) * 5.;
 
     float disc = length(cUv);
 
